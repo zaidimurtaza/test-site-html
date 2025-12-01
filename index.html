@@ -1,0 +1,1995 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Peak Agent AI — Page Experience Optimizer</title>
+    <meta property="og:title" content="Peak Agent AI - Built for Growth Teams, Powered by AI">
+    <meta property="og:image" content="https://peakagent.ai/images/logo_indigo.png">
+
+    <meta name="description" content="Turn traffic into trials, purchases, and revenue with high-velocity page variants. We help SaaS & eCommerce teams ship better pages fast—and prove the lift.">
+
+    <!-- Cookie Consent -->
+    <script type="module" src="./cookieconsent-config.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
+    <!-- End Cookie Consent -->
+
+    <!-- Page optimizer -->
+    <script
+        src="https://cdn.peakagent.ai/lpo/scripts/loader.v0.min.js"
+        data-pa-site-key="pa_site_v1_iV3sVoSTA-Ukaj5SESJpNQ">
+    </script>
+    <script>PeakAgent.setConsent(true);</script>
+    <!-- <script
+        src="./builtScripts/applier.v0.min.js"
+        data-pa-site-key="pa_site_v1_iV3sVoSTA-Ukaj5SESJpNQ">
+    </script> -->
+
+<script>PeakAgent.setConsent(true);</script>
+    <!-- <script src="./builtScripts/applier.v1.min.js"></script> -->
+    <!-- END Page optimizer -->
+
+    <!-- Google Analytics -->
+    <script type="text/plain" data-category="analytics" data-service="Google Analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-BXVQ9567VS"></script>
+    <script type="text/plain" data-category="analytics" data-service="Google Analytics" >
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BXVQ9567VS');
+    </script>
+    <!-- End Google Analytics -->
+
+    <!-- Google Ads -->
+    <script type="text/plain" data-category="marketing" data-service="Google Ads" async src="https://www.googletagmanager.com/gtag/js?id=AW-16911254531"></script>
+    <script type="text/plain" data-category="marketing" data-service="Google Ads">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16911254531');
+    </script>
+    <!-- End Google Ads -->
+
+    <!-- Meta Pixel Code -->
+    <script type="text/plain" data-category="marketing" data-service="Facebook">
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1090116835898845');
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #7177CB;
+            --primary-blue: #7177CB;
+            --accent-purple: #7177CB;
+            --accent-pink: #ec4899;
+            --link-blue: #7177CB;
+            --dark-text: #15221c;
+            --body-text: #333333;
+            --light-gray: #f3f3f3;
+            --border-gray: #cccccc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--body-text);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-wrap: balance;
+            color: var(--dark-text);
+            font-weight: 700;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--light-gray);
+            padding: 20px 0;
+        }
+
+        .nav-container {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-toggle {
+            display: none;
+            border: none;
+            background: none;
+            width: 36px;
+            height: 36px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .nav-toggle-bar {
+            position: relative;
+            width: 22px;
+            height: 2px;
+            background: var(--dark-text);
+            transition: background 0.3s ease;
+        }
+
+        .nav-toggle-bar::before,
+        .nav-toggle-bar::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 22px;
+            height: 2px;
+            background: var(--dark-text);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .nav-toggle-bar::before {
+            transform: translateY(-6px);
+        }
+
+        .nav-toggle-bar::after {
+            transform: translateY(6px);
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-bar {
+            background: transparent;
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-bar::before {
+            transform: rotate(45deg);
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-bar::after {
+            transform: rotate(-45deg);
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: var(--dark-text);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 0;
+            transition: color 0.2s ease;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-link.active {
+            color: var(--link-blue);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--link-blue);
+        }
+
+        .nav-arrow {
+            width: 10px;
+            height: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .nav-item:hover .nav-arrow {
+            transform: rotate(180deg);
+        }
+
+        .nav-item.open .nav-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 12px;
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            border-radius: 3px;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.1);
+            min-width: 280px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1001;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 12px 20px;
+            color: var(--dark-text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .dropdown-link:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-link:hover {
+            background: var(--light-gray);
+            color: var(--primary-green);
+        }
+
+        .dropdown-link-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dropdown-link-desc {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .product-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .nav-cta {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 9px 15px;
+            border-radius: 3px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(113, 119, 203, 0.35);
+        }
+
+        .nav-login {
+            background: transparent;
+            color: var(--dark-text);
+            padding: 9px 15px;
+            border: 1px solid var(--border-gray);
+            border-radius: 3px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-login:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 100px;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 50%, #f0f9ff 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(113, 119, 203, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(113, 119, 203, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 15s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-30px, 30px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 64px;
+            font-weight: 900;
+            max-width: 900px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, var(--dark-text) 0%, var(--primary-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 20px;
+            line-height: 32px;
+            max-width: 720px;
+            margin: 0 auto 40px;
+            color: var(--body-text);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .promo-banner {
+                padding: .5rem 1rem;
+                display: inline-block;
+                margin: 0px auto 60px;
+                background: #fff8dc;
+                border: 2px solid var(--primary-blue);
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+         .promo-banner p {
+            color: var(--primary-blue);
+            font-size: 1rem;
+            font-weight: bold;
+         }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(113, 119, 203, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(113, 119, 203, 0.45);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--dark-text);
+            padding: 16px 32px;
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        /* Audience Section */
+        .audience-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .audience-card {
+            background: var(--light-gray);
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid var(--border-gray);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+        }
+
+        .audience-card h3 {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 12px;
+        }
+
+        .audience-card p {
+            font-size: 16px;
+            line-height: 26px;
+            color: var(--body-text);
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            line-height: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--dark-text) 0%, var(--primary-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            line-height: 28px;
+            max-width: 680px;
+            margin: 0 auto;
+            color: var(--body-text);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, #7177CB 0%, #9ca3e8 100%);
+            border: none;
+            border-radius: 16px;
+            padding: 36px 32px;
+            text-align: left;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(113, 119, 203, 0.15);
+        }
+
+        /* Glossy shine effect - more subtle and elegant */
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .product-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 100%);
+            border-radius: 16px 16px 0 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(113, 119, 203, 0.35);
+        }
+
+        .product-card:hover::before {
+            left: 125%;
+            opacity: 1;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -75%;
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                left: 125%;
+                opacity: 0;
+            }
+        }
+
+        /* Remove old hover effects */
+        .feature-box-1:hover,
+        .feature-box-2:hover,
+        .feature-box-3:hover,
+        .feature-box-4:hover,
+        .feature-box-5:hover,
+        .feature-box-6:hover {
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        .product-icon-wrapper {
+            display: none;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: white !important;
+            position: relative;
+            z-index: 10;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card h4 {
+            font-size: 17px;
+            line-height: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: white !important;
+            position: relative;
+            z-index: 10;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card p {
+            font-size: 15px;
+            line-height: 24px;
+            color: rgba(255, 255, 255, 0.95) !important;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 10;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card code {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+            color: white !important;
+            position: relative;
+            z-index: 10;
+        }
+
+        .product-usecase {
+            font-size: 13px;
+            line-height: 22px;
+            color: #4a4a4a;
+            margin-top: 8px;
+        }
+
+        .product-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 28px 0;
+            text-align: left;
+        }
+
+        .product-features li {
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--body-text);
+            padding-left: 24px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .product-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .product-link:hover {
+            gap: 10px;
+            color: var(--accent-purple);
+        }
+
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .path-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px 32px;
+            border: 1px solid var(--light-gray);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .path-card h3 {
+            font-size: 26px;
+            line-height: 32px;
+            margin-bottom: 16px;
+        }
+
+        .path-card p {
+            font-size: 16px;
+            line-height: 26px;
+            color: var(--body-text);
+        }
+
+        .path-note {
+            margin-top: 32px;
+            text-align: center;
+            font-size: 15px;
+            color: #4a4a4a;
+        }
+
+        /* Split Box Animations */
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-left {
+            animation: slideInFromLeft 0.8s ease-out forwards;
+        }
+
+        .animate-right {
+            animation: slideInFromRight 0.8s ease-out forwards;
+        }
+
+        .animate-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .audience-card:nth-child(1) {
+            animation: slideInFromLeft 0.8s ease-out forwards;
+        }
+
+        .audience-card:nth-child(2) {
+            animation: slideInFromRight 0.8s ease-out forwards;
+        }
+
+        .product-card {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .product-card:nth-child(1) { animation-delay: 0.1s; opacity: 0; }
+        .product-card:nth-child(2) { animation-delay: 0.2s; opacity: 0; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; opacity: 0; }
+        .product-card:nth-child(4) { animation-delay: 0.4s; opacity: 0; }
+        .product-card:nth-child(5) { animation-delay: 0.5s; opacity: 0; }
+        .product-card:nth-child(6) { animation-delay: 0.6s; opacity: 0; }
+
+        .path-card:nth-child(1) {
+            animation: slideInFromLeft 0.8s ease-out forwards;
+        }
+
+        .path-card:nth-child(2) {
+            animation: slideInFromRight 0.8s ease-out forwards;
+        }
+
+        /* Add-on Preview Cards */
+        .addon-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .addon-preview-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid var(--light-gray);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .addon-preview-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .addon-preview-image {
+            width: 100%;
+            max-width: 120px;
+            height: 120px;
+            margin: 0 auto 16px;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-gray);
+        }
+
+        .addon-preview-image img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .addon-preview-card h4 {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .addon-preview-card p {
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--body-text);
+            margin-bottom: 16px;
+        }
+
+        .addon-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(113, 119, 203, 0.1);
+            color: var(--primary-blue);
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        /* DESIGN A: Apple Minimalist - Uniform CTA Color */
+        .design-a-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .design-a-card {
+            background: linear-gradient(135deg, #7177CB 0%, #9ca3e8 100%);
+            border-radius: 12px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+        }
+
+        .design-a-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(113, 119, 203, 0.35);
+        }
+
+        .design-a-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .design-a-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .design-a-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+            margin: 0;
+        }
+
+        /* DESIGN B: Colorful Accent Cards */
+        .design-b-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .design-b-card {
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-left: 4px solid;
+            border-radius: 8px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+        }
+
+        .design-b-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .design-b-1 { border-left-color: #7177CB; }
+        .design-b-2 { border-left-color: #ec4899; }
+        .design-b-3 { border-left-color: #10b981; }
+        .design-b-4 { border-left-color: #f59e0b; }
+        .design-b-5 { border-left-color: #8b5cf6; }
+        .design-b-6 { border-left-color: #06b6d4; }
+
+        .design-b-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #15221c;
+            margin-bottom: 12px;
+        }
+
+        .design-b-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .design-b-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+            margin: 0;
+        }
+
+        /* DESIGN C: Minimal List */
+        .design-c-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .design-c-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 40px;
+            padding: 40px 0;
+            border-bottom: 1px solid #e5e5e5;
+            transition: all 0.3s ease;
+        }
+
+        .design-c-item:last-child {
+            border-bottom: none;
+        }
+
+        .design-c-item:hover {
+            background: rgba(113, 119, 203, 0.02);
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+        .design-c-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: rgba(113, 119, 203, 0.2);
+            line-height: 1;
+        }
+
+        .design-c-item h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #7177CB;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .design-c-item h4 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #15221c;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .design-c-item p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            margin: 0;
+        }
+
+        /* DESIGN D: Modern Subtle Cards */
+        .design-d-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .design-d-card {
+            background: #fafafa;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .design-d-card:hover {
+            background: white;
+            border-color: #e5e5e5;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .design-d-label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #7177CB 0%, #9ca3e8 100%);
+            padding: 4px 12px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+
+        .design-d-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #15221c;
+            margin-bottom: 12px;
+        }
+
+        .design-d-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .design-d-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Step Boxes for How it Works */
+        .step-boxes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            margin-top: 60px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .step-boxes::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--primary-blue) 10%, var(--primary-blue) 90%, transparent 100%);
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .step-box {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px 24px;
+            border: 2px solid var(--light-gray);
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: center;
+            flex: 1;
+            max-width: 240px;
+            z-index: 1;
+        }
+
+        .step-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(113, 119, 203, 0.2);
+            border-color: var(--primary-blue);
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 24px;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 24px rgba(113, 119, 203, 0.3);
+        }
+
+        .step-box h4 {
+            font-size: 17px;
+            line-height: 24px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: var(--dark-text);
+        }
+
+        .step-box p {
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--body-text);
+        }
+
+        @media (max-width: 991px) {
+            .step-boxes {
+                flex-wrap: wrap;
+                gap: 24px;
+            }
+
+            .step-boxes::before {
+                display: none;
+            }
+
+            .step-box {
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .step-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .step-box {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* Hero Text Animation - Simple Fade In */
+        .hero-title-animated {
+            opacity: 0;
+            animation: fadeInScale 1s ease-out 0.3s forwards;
+        }
+
+        .hero-description-animated {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+        }
+
+        .hero-actions {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.9s forwards;
+        }
+
+        .promo-banner {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.2s forwards;
+
+        }
+
+        .hero-image {
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-out 1.5s forwards;
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Partnerships Section */
+        .partnerships-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--light-gray) 0%, #fafafa 100%);
+        }
+
+        .partnerships-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .partnership-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e5e5;
+        }
+
+        .partnership-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .partnership-logo {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .partnership-logo img {
+            max-height: 100%;
+            max-width: 180px;
+            object-fit: contain;
+        }
+
+        .partnership-card h3 {
+            font-size: 22px;
+            line-height: 28px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .partnership-card p {
+            font-size: 15px;
+            line-height: 24px;
+            color: var(--body-text);
+        }
+
+        /* Outcomes Section */
+        .outcomes-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .outcomes-list {
+            list-style: none;
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .outcomes-list li {
+            font-size: 16px;
+            line-height: 28px;
+            color: var(--body-text);
+            padding-left: 28px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .outcomes-list li::before {
+            content: '•';
+            position: absolute;
+            left: 8px;
+            color: var(--primary-blue);
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #7177CB 0%, rgba(113, 119, 203, 0.85) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(113, 119, 203, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            font-size: 48px;
+            line-height: 56px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            line-height: 28px;
+            max-width: 680px;
+            margin: 0 auto 40px;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--dark-text);
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 64px 0 24px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .footer-link {
+            color: var(--body-text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-green);
+        }
+
+        .footer-copy {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .products-grid,
+            .partnerships-grid,
+            .audience-grid,
+            .path-grid,
+            .addon-preview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-card {
+                padding: 32px 28px;
+            }
+
+            .product-card h3 {
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .product-card h4 {
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            .product-card p {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+                line-height: 50px;
+            }
+
+            .section-header h2 {
+                font-size: 38px;
+                line-height: 46px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .container, .nav-container {
+                max-width: 100%;
+                padding: 0 16px;
+            }
+
+            .nav-container {
+                position: relative;
+            }
+
+            .nav-toggle {
+                display: inline-flex;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: calc(100% + 12px);
+                left: 16px;
+                right: 16px;
+                padding: 20px;
+                flex-direction: column;
+                gap: 16px;
+                background: var(--white);
+                border: 1px solid var(--light-gray);
+                border-radius: 12px;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            }
+
+            .nav-menu.open {
+                display: flex;
+            }
+
+            .nav-link,
+            .nav-cta,
+            .nav-login {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .nav-cta,
+            .nav-login {
+                text-align: center;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .dropdown-menu {
+                position: static;
+                margin-top: 8px;
+                background: var(--light-gray);
+                border: none;
+                border-radius: 8px;
+                box-shadow: none;
+                padding: 8px 0;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+            }
+
+            .nav-item.open .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-link {
+                padding: 10px 16px;
+                border-bottom: none;
+            }
+
+            .products-grid,
+            .partnerships-grid,
+            .audience-grid,
+            .path-grid,
+            .addon-preview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                padding: 28px 24px;
+            }
+
+            .product-card h3 {
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .product-card h4 {
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            .product-card p {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+                line-height: 42px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+                line-height: 26px;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+                line-height: 38px;
+            }
+
+            .cta-section h2 {
+                font-size: 36px;
+                line-height: 42px;
+            }
+
+            /* Touch targets */
+            .nav-link,
+            .nav-cta,
+            .nav-login,
+            .dropdown-link {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="images/peak-agent-logo.png" alt="Peak Agent AI Logo">
+                </div>
+                Peak Agent AI
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <div class="nav-item">
+                    <button class="nav-link nav-link-toggle" type="button" aria-expanded="false">
+                        Products
+                        <svg class="nav-arrow" viewBox="0 0 10 10" fill="none">
+                            <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="page-optimizer.html" class="dropdown-link">
+                            <div class="dropdown-link-title">
+                                <svg class="product-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 8h10M8 3v10" stroke="#7177CB" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                Page Optimizer
+                            </div>
+                            <div class="dropdown-link-desc">Ship variants fast, track per-version, auto-weight traffic</div>
+                        </a>
+                        <a href="creative-insights.html" class="dropdown-link">
+                            <div class="dropdown-link-title">
+                                <svg class="product-icon" viewBox="0 0 16 16" fill="none">
+                                    <circle cx="8" cy="8" r="6" fill="#7177CB" fill-opacity="0.3"/>
+                                    <circle cx="8" cy="8" r="3" fill="#7177CB"/>
+                                </svg>
+                                Creative Insights
+                            </div>
+                            <div class="dropdown-link-desc">Evidence for what to test next on your pages (add-on)</div>
+                        </a>
+                        <a href="growth-analytics-hub.html" class="dropdown-link">
+                            <div class="dropdown-link-title">
+                                <svg class="product-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M2 12l3-3 3 3 6-6" stroke="#7177CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Growth Analytics Hub
+                            </div>
+                            <div class="dropdown-link-desc">Connect channel → page → revenue (add-on)</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <button class="nav-link nav-link-toggle" type="button" aria-expanded="false">
+                        Resources
+                        <svg class="nav-arrow" viewBox="0 0 10 10" fill="none">
+                            <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="agentic-commerce.html" class="dropdown-link">
+                            <div class="dropdown-link-title">
+                                <svg class="product-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M2 8l3 3 9-9" stroke="#7177CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Agentic Commerce Readiness Check
+                            </div>
+                            <div class="dropdown-link-desc">Test how ready your store is for AI shopping agents</div>
+                        </a>
+                    </div>
+                </div>
+                <a href="https://app.peakagent.ai" class="nav-login">Login</a>
+                <a href="join.html" class="nav-cta active">Apply for early access</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title-animated">Your website gets smarter with every visitor</h1>
+                <p class="hero-description hero-description-animated">Peak Agent AI generates multiple versions of your pages and tests them live. Each visitor sees the variant most likely to convert them. No guessing. No manual A/B tests. Just better results.</p>
+                <div class="hero-actions">
+                    <a href="join.html" class="btn-primary">Start optimizing →</a>
+                    <a href="#how-it-works" class="btn-secondary">See how it works →</a>
+                </div>
+                <div class="promo-banner">
+                    <p>50+ companies already applied for early access</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/Hero_v1.png" alt="Page Experience Optimizer Dashboard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Built for SaaS & eCommerce Section -->
+    <section class="audience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for SaaS & eCommerce teams who need conversions, not experiments</h2>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <h3>SaaS</h3>
+                    <p>Turn more visitors into paid customers. Ship web page variants based on visitor role, company size, and funnel stage.</p>
+                </div>
+                <div class="audience-card">
+                    <h3>eCommerce</h3>
+                    <p>Increase purchase rates and average order value. Test product descriptions, collection pages, offer bundles, and social proof—without touching code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What the Optimizer Does Section -->
+    <section class="products-section" id="what-it-does">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Peak Agent AI works</h2>
+                <p>Think Meta's ad algorithm, but for your website pages. Create variants, let AI learn from real visitors, watch conversions climb.</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card feature-box-2">
+                    <h3>Create</h3>
+                    <h4>Generates page variants in minutes</h4>
+                    <p>Spin up multiple versions of your homepage, pricing page, product pages, or checkout flow. Uses proven conversion patterns from SaaS & Shopify. No designer needed.</p>
+                </div>
+                <div class="product-card feature-box-3">
+                    <h3>Optimize</h3>
+                    <h4>AI sends more traffic to what's working</h4>
+                    <p>Continuously adjusts traffic distribution toward higher-converting variants. More visitors see winners, fewer see losers.</p>
+                </div>
+                <div class="product-card feature-box-4">
+                    <h3>Measure</h3>
+                    <h4>Know exactly which version drove each conversion</h4>
+                    <p>Track trials, demos, purchases, upgrades, and revenue per variant. See "Homepage V3 drove 47 trials" not "homepage got 2,000 visits."</p>
+                </div>
+                <div class="product-card feature-box-1">
+                    <h3>Analyze</h3>
+                    <h4>Reads your page, understands your conversion goals</h4>
+                    <p>Scans your existing pages and conversion funnel—trial signups, demo bookings, purchases, upgrades, revenue—to understand what you're selling and what actions drive value, so it can generate variants that improve the steps that matter most.</p>
+                </div>
+                <div class="product-card feature-box-5">
+                    <h3>Govern</h3>
+                    <h4>Experiment safely without breaking your brand</h4>
+                    <p>Set brand guidelines, require approvals, roll back instantly, and see full change history. Run fast without losing control.</p>
+                </div>
+                <div class="product-card feature-box-6">
+                    <h3>Integrate</h3>
+                    <h4>One script tag. Live in hours.</h4>
+                    <p>Add our JavaScript snippet to your <code>&lt;head&gt;</code> tag. Peak Agent handles variant rendering, conversion tracking, and traffic routing automatically.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="join.html" class="btn-primary">Launch your first variant →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Showcase Section -->
+    <section class="outcomes-section" style="padding: 80px 0;">
+        <div class="container">
+            <div class="hero-image" style="opacity: 1; animation: none; max-width: 900px; margin: 0 auto;">
+                <img src="images/Sub_Hero_v1.png" alt="Peak Agent AI Platform Interface">
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="products-section" id="how-it-works" style="background: var(--light-gray); padding: 80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Three steps to better conversions</h2>
+            </div>
+            <div class="step-boxes">
+                <div class="step-box">
+                    <div class="step-number">1</div>
+                    <h4>Add one script tag <span style="color: var(--primary-blue); font-weight: 600;">(5 minutes)</span></h4>
+                    <p>Copy-paste our snippet into your site's <code>&lt;head&gt;</code>. No back-end changes needed.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">2</div>
+                    <h4>Generate variants <span style="color: var(--primary-blue); font-weight: 600;">(5 minutes)</span></h4>
+                    <p>Tell Peak Agent your goal. It creates multiple page versions using patterns that convert. Review, edit, launch.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">3</div>
+                    <h4>Watch AI optimize <span style="color: var(--primary-blue); font-weight: 600;">(automatic)</span></h4>
+                    <p>Traffic automatically flows to winning variants. You see which versions drive trials, demos, and revenue. Lock in winners, generate new tests, repeat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="outcomes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What you actually get</h2>
+            </div>
+            <ul class="outcomes-list">
+                <li><strong>More conversions per visitor</strong> — Stop wasting traffic on underperforming pages. Every visitor sees the version most likely to convert them based on real performance data.</li>
+                <li><strong>Lower customer acquisition cost</strong> — Faster learning = fewer wasted visitors = lower cost per trial/purchase. Get answers in days, not months.</li>
+                <li><strong>Clear revenue attribution</strong> — "Pricing page V2 generated $47K in new MRR" not "pricing page got traffic." See exactly which page changes made money.</li>
+            </ul>
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="join.html" class="btn-primary">Get results on your pages →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-on Preview Section -->
+    <section class="products-section" style="background: var(--light-gray); padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Optional: Go even deeper</h2>
+            </div>
+            <div class="addon-preview-grid">
+                <div class="addon-preview-card">
+                    <span class="addon-badge">ADD-ON</span>
+                    <div class="addon-preview-image">
+                        <img src="images/creative.png" alt="Creative Insights">
+                    </div>
+                    <h4>Creative Insights</h4>
+                    <p><strong>Evidence-based variant ideas</strong></p>
+                    <p style="margin-top: 12px;">Analyzes your creative assets, detects fatigue, identifies which hooks/offers/social proof drive clicks and conversions. Start each test with data, not hunches.</p>
+                    <p style="margin-top: 16px;"><a href="creative-insights.html" class="product-link">Explore Creative Insights →</a></p>
+                </div>
+                <div class="addon-preview-card">
+                    <span class="addon-badge">ADD-ON</span>
+                    <div class="addon-preview-image">
+                        <img src="images/analytics.png" alt="Growth Analytics Hub">
+                    </div>
+                    <h4>Growth Analytics Hub</h4>
+                    <p><strong>Connect ad spend to page performance to revenue</strong></p>
+                    <p style="margin-top: 12px;">Unifies Meta, Google Ads, GA4, and LinkedIn data. See the full path: which ad → which page variant → which conversions → actual ROAS.</p>
+                    <p style="margin-top: 16px;"><a href="growth-analytics-hub.html" class="product-link">Explore Analytics Hub →</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partnerships Section -->
+    <section class="partnerships-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Backed by the best</h2>
+            </div>
+            <div class="partnerships-grid">
+                <div class="partnership-card">
+                    <div class="partnership-logo">
+                        <img src="images/ms_badge.png" alt="Microsoft for Startups">
+                    </div>
+                    <h3>Microsoft for Startups</h3>
+                    <p>Enterprise infrastructure powering our AI-driven optimization at scale.</p>
+                </div>
+                <div class="partnership-card">
+                    <div class="partnership-logo">
+                        <img src="images/nvidia_badge.png" alt="NVIDIA Inception">
+                    </div>
+                    <h3>NVIDIA Inception</h3>
+                    <p>Supporting next-generation AI technology for faster innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="sign-up">
+        <div class="container">
+            <h2>Stop running your website on gut feelings</h2>
+            <p>Every visitor is a conversion opportunity. Peak Agent AI makes sure they see the page version that actually works for them.</p>
+            <p>Automatic variant generation. Real-time traffic optimization. Clear revenue impact.</p>
+            <div class="cta-actions">
+                <a href="join.html" class="btn-white">Get Started →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                <span class="footer-link" style="color: #ccc;">·</span>
+                <a href="" class="footer-link" data-cc="show-preferencesModal">Cookie Preferences</a>
+                <span class="footer-link" style="color: #ccc;">·</span>
+                <a href="terms.html" class="footer-link">Terms of Service</a>
+                <span class="footer-link" style="color: #ccc;">·</span>
+                <a href="faq.html" class="footer-link">FAQ</a>
+                <span class="footer-link" style="color: #ccc;">·</span>
+                <a href="contact.html" class="footer-link">Contact Us</a>
+            </div>
+            <p class="footer-copy">
+                &copy; 2025 Peak Agent AI. Built for Growth Teams, Powered by AI.
+                <br>
+                <span style="font-size: 14px; color: #666; margin-top: 12px; display: inline-block; font-weight: 500;">
+                    Made in Sweden & Switzerland <span style="margin-left: 6px; font-size: 16px;">🇸🇪 🇨🇭</span>
+                </span>
+            </p>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            const navToggles = document.querySelectorAll('.nav-link-toggle');
+
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', String(!expanded));
+                    navMenu.classList.toggle('open', !expanded);
+                });
+            }
+
+            navToggles.forEach((toggle) => {
+                toggle.addEventListener('click', (event) => {
+                    if (window.matchMedia('(max-width: 767px)').matches) {
+                        event.preventDefault();
+                        const navItem = toggle.parentElement;
+                        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                        toggle.setAttribute('aria-expanded', String(!expanded));
+                        navItem.classList.toggle('open', !expanded);
+                    }
+                });
+            });
+
+            document.querySelectorAll('.nav-menu a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    if (navToggle && navMenu && window.matchMedia('(max-width: 767px)').matches) {
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        navMenu.classList.remove('open');
+                        navToggles.forEach((toggle) => {
+                            toggle.setAttribute('aria-expanded', 'false');
+                            const navItem = toggle.parentElement;
+                            if (navItem) {
+                                navItem.classList.remove('open');
+                            }
+                        });
+                    }
+                });
+            });
+
+        })();
+    </script>
+</body>
+</html>
